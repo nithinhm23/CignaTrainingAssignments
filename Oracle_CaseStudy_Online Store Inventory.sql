@@ -38,3 +38,21 @@ CREATE TABLE Order_Details(
 );
 INSERT INTO Order_Details(order_detail_id,order_id,product_id,quantity) VALUES (300200,200,1,2);
 INSERT INTO Order_Details(order_detail_id,order_id,product_id,quantity) VALUES (300201,201,2,5);
+
+--Other Required Queries
+--1. Retrieve Product with low stock quantity
+SELECT * FROM Products WHERE stock_quantity < 20;
+
+--2. To get amount spent by each customer
+SELECT first_name, SUM(O.total_amount) as Total_Amount_Spent 
+FROM Customers C INNER JOIN Orders O on C.customer_id = O.customer_id 
+GROUP BY C.first_name; 
+
+--3. To update the product quantity
+UPDATE Products P
+SET P.stock_quantity = P.stock_quantity - (
+  SELECT SUM(OD.quantity)
+  FROM Order_Details OD
+  WHERE OD.product_id = P.product_id
+)
+WHERE P.product_id IN (SELECT DISTINCT product_id FROM Order_Details);
