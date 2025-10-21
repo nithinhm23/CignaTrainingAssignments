@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creditcard</title>
+    <style>
+        .App{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-items: center ;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <div>
+            This is a secure 128-bit SSL Encrypted payment. You're safe.
+        </div>
+        <br />
+        <input type="radio" id="cc" name="cc">Credit Card (Visa, Mastercard)
+        <input type="radio" id="Paypal" name="Paypal">PayPal
+        <br /><br />
+        <label for="CardNO">Card number</label>
+        <label style="font-size: small;" for="validation">The 16 digits on front of your card</label>
+        <br />
+        <input type="number" id="carno" name="cardno">
+        <br /><br />
+        <div class="App">
+            <div>
+                <label for="ExpDate">Expiration date</label>
+                <br />
+                <select name="month" id="month">
+                    <option disabled selected>Month</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <span>/</span>
+                <select name="year" id="year">
+                    <option disabled selected>Year</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                    <option>2030</option>
+                    <option>2031</option>
+                    <option>2032</option>
+                </select>
+            </div>
+            <div style="margin-left: 20px;">
+
+                <label for="cvv">CVV2/CVC2</label>
+                <br />
+                <input type="number" id="cvv" name="cvv" </div>
+            </div>
+        </div>
+            
+            <br/><br/>
+            <label for="Name">Full Name on a Card</label>
+            <br/>
+            <input type="text" id="Name" name="Name">
+            <br/><br/>
+            <div>
+                You will be charged $29.00 every month
+            </div>
+        
+    </fieldset>
+    <input type="submit" id="submit" name="submit" value="Complete Transaction">
+
+</body>
+
+</html>
