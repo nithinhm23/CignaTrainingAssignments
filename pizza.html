@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza</title>
+</head>
+
+<body>
+    <h1>WELCOME TO ITALIAN PIZZA!</h1>
+    <p>We deliver pizza in 40 minutes max. If not - Pizza's on us!</p>
+    <fieldset>
+        <form action="pizza.php" method="post">
+            <label for "email">Email</label>
+            <br/>
+            <input autofocus type="text" id="email" name="email"/>
+            <br/> <br/>
+            <label for "phone">Phone</label>
+            <br/>
+            <input type="number" id="area" name="area" placeholder="Area"/>
+            <input type="number" id="local" name="local" placeholder="Local"/>
+            <input type="number" id="local1" name="local1" placeholder="Local1"/>
+            <br/> <br/>
+            <label for "slices">Number of Slices</label>
+            <br/>
+            <input type="number" id="slices" name="'slices"/>
+            <br/> <br/>
+            <label for "size">Pizza Size</label>
+            <br/>
+            <input type="radio" id="8-inch" name="Size">8-inch
+            <input type="radio" id="10-inch" name="Size">10-inch
+            <input type="radio" id="12-inch" name="Size">12-inch
+            <input type="radio" id="14-inch" name="Size">14-inch
+            <br/> <br/>
+            <label for "toppings">Toppings</label>
+            <br/>
+            <input type="checkbox" id="Pepperoni" name="toppings">Pepperoni
+            <input type="checkbox" id="Onions" name="toppings">Onions
+            <input type="checkbox" id="Mushrooms" name="toppings">Mushrooms
+            <input type="checkbox" id="Sausage" name="toppings">Sausage
+            <br/> <br/>
+            <input type="checkbox" id="terms" name="terms" required>I agree to the TERMS AND CONDITIONS
+            <br/> <br/>
+            <input type="submit" id="submit" name="submit" value="Order Now">
+        </form>
+    </fieldset>
+</body>
+</html>
